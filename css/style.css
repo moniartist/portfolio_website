@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+font-family: 'Cabin', sans-serif;
+font-size: 14px;
+}
+
+h1, h2, h3 {
+color:#38789D;
+}
+
+h1 {
+font-size:28px;
+}
+
+h2 {
+font-size:24px;	
+}
+
+a {
+text-decoration:none;
+color:#38789D;
+}
+
+button {
+background-color:#38789D;
+color:#fff;
+padding:10px;
+border:none;
+}
