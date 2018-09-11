@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
+* {
+  box-sizing: border-box;
+}
 
 body {
 	font-family: 'Cabin', sans-serif;
