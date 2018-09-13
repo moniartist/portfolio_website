@@ -9,8 +9,47 @@ body {
 	font-size: 14px;
 }
 
+.logo {
+    height:150px;
+}
+
+.navigation {
+    list-style-type: none;
+    padding: 0;
+    float: right;
+}
+
+.navigation > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.wrapper {
+    width:100%;
+    max-width:1600px;
+    margin:0 auto;
+    padding:0 20px;
+}
+
+.item-cols {
+    font-size: 0; /* Could also use "white-space: nowrap;" for this gets rid of all extra whitespace OR use typical "float:left;" */
+}
+
+.col-4 {
+    width:24%;
+    display:inline-block;
+    margin-right:1%;
+    font-size:16px;
+    text-align:center;
+}
+
+.col-4:last-child {
+    margin-right:0;
+}
+
 h1, h2, h3 {
 	color:#38789D;
+	text-align:center;
 }
 
 h1 {
@@ -31,4 +70,27 @@ button {
 	color:#fff;
 	padding:10px;
 	border:none;
+}
+
+
+/* Media Queries Below This Line */
+
+@media all and (max-width: 500px) {
+    .logo {
+        height: 50px;
+    }
+    
+    h1 {
+    font-size: 18px;
+  }
+
+  .col-4 {
+    width: 49%;
+    margin-right: 1%;
+  }
+  
+  .col-4:nth-child(2) {
+    margin-right: 0;
+    }
+
 }
