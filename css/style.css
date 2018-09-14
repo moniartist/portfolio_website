@@ -53,11 +53,11 @@ h1, h2, h3 {
 }
 
 h1 {
-	font-size:28px;
+	font-size:24px;
 }
 
 h2 {
-	font-size:24px;	
+	font-size:20px;	
 }
 
 a {
@@ -81,7 +81,7 @@ button {
     }
     
     h1 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .col-4 {
@@ -94,3 +94,22 @@ button {
     }
 
 }
+
+@media all and (max-width: 360px) {
+    .logo {
+        width:100%;
+    }
+    
+    h1 {
+        font-size:16px;
+    }
+    
+    .col-4 {
+        width:100%;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    
+} 
