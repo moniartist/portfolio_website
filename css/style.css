@@ -13,6 +13,17 @@ body {
     height:200px;
 }
 
+header {
+	margin-bottom:50px;
+	display: block;
+}
+
+article {
+	display: block;
+	clear: both;
+	min-height: 500px;
+}
+
 .navigation {
     list-style-type: none;
     padding: 0;
@@ -25,22 +36,26 @@ body {
 }
 
 .wrapper {
-    width:100%;
-    max-width:1600px;
+    max-width:1250px;
     margin:0 auto;
     padding:0 20px;
 }
 
 .item-cols {
     font-size: 0; /* Could also use "white-space: nowrap;" for this gets rid of all extra whitespace OR use typical "float:left;" */
+	display: block;
+	width:100%;
+	margin:0 auto;
 }
 
 .col-4 {
-    width:24%;
-    display:inline-block;
+    display:block;
+	width:24%;
+	height: auto;
     margin-right:1%;
     font-size:16px;
     text-align:center;
+	float:left;
 }
 
 .col-4:last-child {
@@ -57,7 +72,7 @@ h1 {
 }
 
 h2 {
-	font-size:20px;	
+	font-size:90%;	
 }
 
 a {
@@ -72,44 +87,93 @@ button {
 	border:none;
 }
 
+footer p {
+	display: block;
+	text-align: center;
+	width:100%;
+	min-height: 50px;
+	margin:15px auto;	
+	clear: both;
+}
 
 /* Media Queries Below This Line */
 
-@media all and (max-width: 500px) {
-    .logo {
-        height: 50px;
-    }
-    
-    h1 {
-    font-size: 16px;
-  }
-
-  .col-4 {
-    width: 49%;
-    margin-right: 1%;
-  }
-  
-  .col-4:nth-child(2) {
-    margin-right: 0;
-    }
+@media all and (min-width:320px) and (max-width:767px) {
+	
+	header {
+		text-align: center;
+		margin:0 auto;
+	}
+	
+	.logo {
+		width:50%;
+		height:auto;
+	}
+	
+	.navigation {
+    list-style-type: none;
+    padding: 0;
+    float:none;
+	margin:10px auto;
+	text-align: center;			
+	}
+		
+	.item-cols{
+		width:100%;
+	}
+	
+	.col-4 {
+    width:100%;
+    display:block;
+    margin-right:1%;
+    font-size:16px;
+    text-align:center;
+	float:left;
+	}
+	
+	.col-4 img {
+		width:100%;
+	}
+	
+	h2 {
+	font-size: 2vh;
+	}
 
 }
 
-@media all and (max-width: 360px) {
-    .logo {
-        width:100%;
-    }
-    
-    h1 {
-        font-size:16px;
-    }
-    
-    .col-4 {
-        width:100%;
-    }
-    
-}
+/* iPads (portrait and landscape) ----------- */
+@media all and (min-width : 768px) and (max-width : 1024px) {
+	
+	header {
+		text-align: center;
+		margin:0 auto;
+	}
+	
+	.navigation {
+    float:none;
+	margin:10px auto;
+	text-align: center;			
+	}
+	
+	.item-cols{
+		max-width:768px;
+	}
+	
+	.col-4 {
+    width:49%;
+    display:block;
+    margin-right:1%;
+    font-size:16px;
+    text-align:center;
+	float:left;
+	}
+	
+	.col-4 img {
+		width:100%;
+	}
+	
+	h2 {
+	font-size: 2vh;
+	}
 
-@media only screen and (min-width: 768px) {
-    
-} 
+}
