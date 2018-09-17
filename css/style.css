@@ -96,8 +96,60 @@ footer p {
 	clear: both;
 }
 
-/* Media Queries Below This Line */
+.button {
+	background-color:#38789D;
+	color:#fff;
+	padding:10px;
+	border:none;
+	transition-duration: 0.2s;
+    transition-property: opacity;
+}
+.button:hover {
+	opacity: 0.5;
+}
 
+
+/* My animation style */
+@keyframes color-change {
+    from {fill: #edc655;}
+    to {fill: #f76414;}
+}
+
+@keyframes color-change2 {
+    from {fill: #377aa7;}
+    to {fill: #D44352;}
+}
+
+@keyframes sky-move {
+	from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+}
+
+.wp_plaza {
+	animation-duration: 3s;
+	animation-name:color-change;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear; 
+}
+
+.boa_building {
+	animation-duration: 2s;
+	animation-name:color-change2;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+.sun_clouds {
+	animation-duration: 30s;
+  	animation-name: sky-move;
+  	animation-iteration-count: infinite;
+  	animation-direction: alternate;
+  	animation-timing-function: linear;
+}
+
+/* Media Queries Below This Line */
 @media all and (min-width:320px) and (max-width:767px) {
 	
 	header {
