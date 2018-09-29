@@ -149,6 +149,13 @@ footer p {
   	animation-timing-function: linear;
 }
 
+
+/* === MY PORTFOLIO JQUERY === */
+.mg_details {
+  display: none;
+}
+
+
 /* Media Queries Below This Line */
 @media all and (min-width:320px) and (max-width:767px) {
 	
