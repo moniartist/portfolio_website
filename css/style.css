@@ -11,28 +11,51 @@ body {
 
 .logo {
     height:200px;
+	float:left;
+}
+
+.logo img {
+	margin: 0 auto;
+	text-align: center;
 }
 
 header {
 	margin-bottom:50px;
 	display: block;
+	min-height: 210px;
+	border-bottom:1px solid #000;
+}
+
+nav {
+	text-transform: uppercase;
 }
 
 article {
 	display: block;
 	clear: both;
-	min-height: 500px;
+	min-height:700px;
+	margin-bottom:165px;
+	text-align: center;
 }
 
 .navigation {
     list-style-type: none;
     padding: 0;
     float: right;
+	margin-top: 150px;
 }
 
 .navigation > li {
   display: inline-block;
   margin-left: 10px;
+}
+
+.navigation > li a:hover {
+	text-decoration: underline;
+}
+
+.navigation > li a:visited {
+	color:#999;
 }
 
 .wrapper {
@@ -44,8 +67,9 @@ article {
 .item-cols {
     font-size: 0; /* Could also use "white-space: nowrap;" for this gets rid of all extra whitespace OR use typical "float:left;" */
 	display: block;
+	clear:both;
 	width:100%;
-	margin:0 auto;
+	margin:10px auto;
 }
 
 .col-4 {
@@ -53,6 +77,7 @@ article {
 	width:24%;
 	height: auto;
     margin-right:1%;
+	margin-top:55px;
     font-size:16px;
     text-align:center;
 	float:left;
@@ -88,11 +113,18 @@ button {
 	border:none;
 }
 
+footer {
+	margin-top:50px;
+	clear: both;
+	height:50px;
+	border-top:1px solid #000;
+	text-align: center;
+}
+
 footer p {
 	display: block;
 	text-align: center;
 	width:100%;
-	min-height: 50px;
 	margin:15px auto;	
 	clear: both;
 }
@@ -109,6 +141,21 @@ footer p {
 	opacity: 0.5;
 }
 
+.contact_me {
+	background-image: url(../img/hola.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+}
+
+
+.fltleft {
+	float:left;
+}
+
+.fltright {
+	float:right;
+}
 
 /* My animation style */
 @keyframes color-change {
@@ -158,7 +205,9 @@ footer p {
 
 
 /* Media Queries Below This Line */
-@media all and (min-width:320px) and (max-width:767px) {
+
+/* iPads (portrait and landscape) ----------- */
+@media all and (min-width : 768px) and (max-width : 1024px) {
 	
 	header {
 		text-align: center;
@@ -166,24 +215,26 @@ footer p {
 	}
 	
 	.logo {
-		width:50%;
-		height:auto;
+		clear:both;
+		display: block;
+		text-align: center;
+		margin: 0 auto;
+		float: none;
 	}
 	
 	.navigation {
-    list-style-type: none;
-    padding: 0;
     float:none;
+	clear: both;
 	margin:10px auto;
-	text-align: center;			
+	text-align: center;	
 	}
-		
+	
 	.item-cols{
-		width:100%;
+		max-width:768px;
 	}
 	
 	.col-4 {
-    width:100%;
+    width:49%;
     display:block;
     margin-right:1%;
     font-size:16px;
@@ -201,26 +252,38 @@ footer p {
 
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media all and (min-width : 768px) and (max-width : 1024px) {
+@media all and (min-width:320px) and (max-width:767px) {
 	
 	header {
 		text-align: center;
 		margin:0 auto;
 	}
 	
-	.navigation {
-    float:none;
-	margin:10px auto;
-	text-align: center;			
+	.logo {
+		width:50%;
+		height:auto;
+		clear:both;
+		float:none;
+		display: block;
+		text-align: center;
+		margin: 0 auto;
 	}
 	
+	.navigation {
+    list-style-type: none;
+    padding: 0;
+    float:none;
+	clear: both;
+	margin:30px auto 10px auto;
+	text-align: center;	
+	}
+		
 	.item-cols{
-		max-width:768px;
+		width:100%;
 	}
 	
 	.col-4 {
-    width:49%;
+    width:100%;
     display:block;
     margin-right:1%;
     font-size:16px;
